@@ -323,19 +323,110 @@ function App() {
               <>
                 <p className="eyebrow">Create profile</p>
                 <h2 id="auth-title">Register free</h2>
-                <form className="auth-form" onSubmit={(event) => handleAuthSubmit(event, "register")}>
-                  <input type="text" placeholder="Full name" aria-label="Full name" />
-                  <input type="email" placeholder="Email address" aria-label="Email address" />
-                  <select defaultValue="" aria-label="Profile for">
-                    <option value="" disabled>
-                      Profile for
-                    </option>
-                    <option>Self</option>
-                    <option>Son</option>
-                    <option>Daughter</option>
-                    <option>Sibling</option>
-                  </select>
-                  <input type="password" placeholder="Create password" aria-label="Create password" />
+                <form className="auth-form registration-form" onSubmit={(event) => handleAuthSubmit(event, "register")}>
+                  <label className="form-field">
+                    <span>Full name</span>
+                    <input type="text" placeholder="Full name" aria-label="Full name" />
+                  </label>
+                  <label className="form-field">
+                    <span>Email</span>
+                    <input type="email" placeholder="Email address" aria-label="Email address" />
+                  </label>
+                  <label className="form-field">
+                    <span>Password</span>
+                    <input type="password" placeholder="Create password" aria-label="Create password" />
+                  </label>
+                  <label className="form-field">
+                    <span>Create profile for</span>
+                    <select defaultValue="" aria-label="Profile for">
+                      <option value="" disabled>
+                        Select profile type
+                      </option>
+                      <option>Self</option>
+                      <option>Son</option>
+                      <option>Daughter</option>
+                      <option>Sibling</option>
+                      <option>Friend</option>
+                    </select>
+                  </label>
+                  <label className="form-field">
+                    <span>Date of birth</span>
+                    <input type="date" aria-label="Date of birth" />
+                  </label>
+                  <label className="form-field">
+                    <span>Height</span>
+                    <select defaultValue="" aria-label="Height">
+                      <option value="" disabled>
+                        Select height
+                      </option>
+                      <option>4 ft 6 in</option>
+                      <option>4 ft 8 in</option>
+                      <option>4 ft 10 in</option>
+                      <option>5 ft 0 in</option>
+                      <option>5 ft 2 in</option>
+                      <option>5 ft 4 in</option>
+                      <option>5 ft 6 in</option>
+                      <option>5 ft 8 in</option>
+                      <option>5 ft 10 in</option>
+                      <option>6 ft 0 in</option>
+                      <option>6 ft 2 in</option>
+                    </select>
+                  </label>
+                  <label className="form-field">
+                    <span>Marital status</span>
+                    <select defaultValue="" aria-label="Marital status">
+                      <option value="" disabled>
+                        Select marital status
+                      </option>
+                      <option>Never married</option>
+                      <option>Divorced</option>
+                      <option>Widowed</option>
+                      <option>Awaiting divorce</option>
+                    </select>
+                  </label>
+                  <label className="form-field">
+                    <span>Mother tongue</span>
+                    <select defaultValue="" aria-label="Mother tongue">
+                      <option value="" disabled>
+                        Select mother tongue
+                      </option>
+                      <option>Hindi</option>
+                      <option>English</option>
+                      <option>Marathi</option>
+                      <option>Gujarati</option>
+                      <option>Punjabi</option>
+                      <option>Tamil</option>
+                      <option>Telugu</option>
+                      <option>Bengali</option>
+                    </select>
+                  </label>
+                  <label className="form-field">
+                    <span>Religion</span>
+                    <select defaultValue="" aria-label="Religion">
+                      <option value="" disabled>
+                        Select religion
+                      </option>
+                      <option>Hindu</option>
+                      <option>Muslim</option>
+                      <option>Sikh</option>
+                      <option>Christian</option>
+                      <option>Jain</option>
+                      <option>Buddhist</option>
+                      <option>Other</option>
+                    </select>
+                  </label>
+                  <label className="form-field">
+                    <span>City</span>
+                    <input type="text" placeholder="City" aria-label="City" />
+                  </label>
+                  <label className="form-field">
+                    <span>Pincode</span>
+                    <input type="text" placeholder="Pincode" aria-label="Pincode" inputMode="numeric" maxLength="6" />
+                  </label>
+                  <label className="form-field">
+                    <span>Mobile number</span>
+                    <input type="tel" placeholder="Mobile number" aria-label="Mobile number" inputMode="tel" />
+                  </label>
                   <button type="submit">Register</button>
                 </form>
                 <p className="auth-note">After registration, users can add photos, preferences, and family details.</p>
